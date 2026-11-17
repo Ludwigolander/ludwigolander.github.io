@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ludwig Olander – Work &amp; projects</title>
+<meta name="description" content="Ludwig Olander – entrepreneur and business student in Gothenburg. A selection of the companies and projects I have worked on.">
+<meta name="robots" content="noindex">
+<meta property="og:title" content="Ludwig Olander – Work &amp; projects">
+<meta property="og:image" content="sp-sunlit.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#14161A;
+  --paper:#F6F5F2;
+  --paper2:#ECEAE4;
+  --accent:#1D4ED8;
+  --accent-soft:#9DB4F7;
+  --muted:#565A62;
+  --muted-dark:#A9AEB8;
+  --line:#CFCCC4;
+  --placeholder:#DAD7CF;
+}
+
+section{
+  box-sizing:border-box;
+  padding:128px;
+  background:var(--paper);
+  color:var(--ink);
+  font-family:'Inter', Arial, sans-serif;
+  display:flex;
+  flex-direction:column;
+  gap:48px;
+}
+section.alt{background:var(--paper2)}
+section.dark{background:var(--ink);color:var(--paper)}
+section.accent{background:var(--accent);color:var(--paper);justify-content:center}
+
+h1,h2,h3{font-family:'Space Grotesk', Arial, sans-serif;margin:0;font-weight:700;letter-spacing:-0.5px}
+h1{font-size:120px;line-height:1.05}
+h2{font-size:72px;line-height:1.08}
+h3{font-size:40px;line-height:1.15}
+p{margin:0;font-size:30px;line-height:1.45}
+
+.head{display:flex;flex-direction:column;gap:20px}
+.kicker{font-size:24px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--accent)}
+section.dark .kicker{color:var(--accent-soft)}
+section.accent .kicker{color:var(--paper)}
+.lede{font-size:30px;color:var(--muted);max-width:1300px}
+section.dark .lede{color:var(--muted-dark)}
+.small{font-size:24px;color:var(--muted)}
+section.dark .small{color:var(--muted-dark)}
+
+.signal{width:1664px;height:40px}
+
+.stats{display:grid;gap:40px}
+.stats.three{grid-template-columns:1fr 1fr 1fr}
+.stats.four{grid-template-columns:1fr 1fr 1fr 1fr}
+.stat{display:flex;flex-direction:column;gap:12px;border-top:3px solid var(--accent);padding-top:24px}
+.stat .num{font-family:'Space Grotesk', Arial, sans-serif;font-size:72px;font-weight:700;line-height:1.05;color:var(--ink)}
+.stat .lbl{font-size:24px;color:var(--muted);line-height:1.4}
+
+.cards{display:grid;gap:32px}
+.cards.two{grid-template-columns:1fr 1fr}
+.cards.three{grid-template-columns:1fr 1fr 1fr}
+.card{background:#FFFFFF;border:1px solid var(--line);border-radius:16px;padding:40px;display:flex;flex-direction:column;gap:16px}
+section.alt .card{background:var(--paper)}
+.card .step{font-family:'Space Grotesk', Arial, sans-serif;font-size:40px;font-weight:700;color:var(--accent)}
+.card .body{font-size:26px;line-height:1.45;color:var(--ink)}
+.card .note{font-size:24px;line-height:1.4;color:var(--muted)}
+
+.cols{display:grid;grid-template-columns:1fr 720px;gap:72px;align-items:start}
+.list{margin:0;padding-left:36px;display:flex;flex-direction:column;gap:14px}
+.list li{font-size:28px;line-height:1.4}
+
+.photo{width:720px;height:540px;object-fit:cover;border-radius:16px;background:var(--placeholder)}
+
+table.tbl{border-collapse:collapse;width:1664px}
+table.tbl th{font-size:24px;font-weight:600;text-transform:uppercase;letter-spacing:1.5px;color:var(--muted);text-align:left;padding:0 24px 16px 0;border-bottom:2px solid var(--ink)}
+table.tbl td{font-size:28px;padding:20px 24px 20px 0;border-bottom:1px solid var(--line);vertical-align:top}
+table.tbl td.year{font-family:'Space Grotesk', Arial, sans-serif;font-weight:700;color:var(--accent)}
+table.tbl td.num{text-align:right;font-family:'Space Grotesk', Arial, sans-serif}
+table.tbl th.num{text-align:right}
+table.tbl tr.total td{font-weight:600;border-bottom:none}
+
+.statement{font-family:'Space Grotesk', Arial, sans-serif;font-size:120px;font-weight:700;line-height:1.05;max-width:1500px}
+
+.rise{animation:rise .6s ease-out both}
+.d1{animation-delay:.12s}
+.d2{animation-delay:.24s}
+.d3{animation-delay:.36s}
+@keyframes rise{from{opacity:0;transform:translateY(24px)}}
+
+html,body{margin:0;background:#14161A}
+body{overflow-x:hidden}
+section{position:relative;overflow:hidden}
+section img,section video{display:block}
+.slide:not(.seen) .rise{animation:none;opacity:0}
+#spike-brand>p{position:relative;text-shadow:0 2px 18px rgba(0,0,0,.55)}
+footer{color:#A9AEB8;font:14px/1.5 Inter,Arial,sans-serif;text-align:center;padding:28px 16px}
+footer a{color:#9DB4F7}
+@media (min-width:900px){
+  .slide{position:relative;width:100%;aspect-ratio:16/9;overflow:hidden}
+  .frame{position:absolute;top:0;left:0;width:1920px;height:1080px;transform-origin:0 0;transform:scale(var(--s,1))}
+  section{width:1920px;height:1080px}
+  .slide+.slide{border-top:1px solid #000}
+}
+@media (max-width:899px){
+  section{width:auto!important;height:auto!important;padding:44px 22px!important;gap:22px!important}
+  h1{font-size:44px} h2{font-size:28px} h3{font-size:20px}
+  p{font-size:16px} .kicker{font-size:12px;letter-spacing:1.5px} .lede{font-size:16px} .small{font-size:13px}
+  .head{gap:10px}
+  .statement{font-size:40px!important}
+  .signal{width:100%;height:20px}
+  .stats{grid-template-columns:1fr 1fr!important;gap:18px!important;row-gap:18px!important}
+  .stat{padding-top:10px;gap:6px;border-top-width:2px} .stat .num{font-size:26px} .stat .lbl{font-size:13px}
+  .cards{grid-template-columns:1fr!important;gap:14px} .card{padding:20px;gap:8px}
+  .card .step{font-size:20px} .card .body{font-size:15px} .card .note{font-size:13px}
+  .cols,section div[style*="grid-template-columns:1fr 600px"]{grid-template-columns:1fr!important;gap:22px!important}
+  section div[style*="gap:28px"],section div[style*="gap:32px"],section div[style*="gap:36px"]{gap:16px!important}
+  .list{padding-left:20px;gap:8px} .list li{font-size:15px}
+  .photo{width:100%!important;height:auto!important;aspect-ratio:4/3}
+  section div[style*="display:flex;gap:40px"]{flex-direction:column!important;gap:22px!important}
+  section div[style*="display:flex;gap:40px"]>div{width:100%}
+  section div[style*="display:flex;gap:40px"] img,section div[style*="display:flex;gap:40px"] video{width:100%!important;height:auto!important;max-height:70vh;object-fit:cover}
+  section div[style*="display:grid;grid-template-columns:3"],section div[style*="display:grid;grid-template-columns:5"]{grid-template-columns:1fr 1fr!important;grid-template-rows:auto!important;gap:10px!important}
+  section div[style*="display:grid;grid-template-columns:3"]>*,section div[style*="display:grid;grid-template-columns:5"]>*{width:100%!important;height:auto!important;aspect-ratio:4/3;border-radius:10px!important}
+  section div[style*="display:grid;grid-template-columns:3"]>[style*="span 2"],section div[style*="display:grid;grid-template-columns:5"]>[style*="span 2"]{aspect-ratio:9/16;grid-row:span 2!important}
+  section div[style*="grid-template-columns:1fr 600px"] img{width:100%!important;height:auto!important}
+  section div[style*="gap:16px"] img[style*="width:720px"],section div[style*="gap:16px"] video[style*="width:720px"]{width:100%!important;height:auto!important}
+  img.logo{position:static!important;order:-1;width:auto!important;height:34px!important;max-width:60%;align-self:flex-start}
+  table.tbl{width:100%!important} table.tbl th{font-size:11px;letter-spacing:1px;padding:0 10px 8px 0} table.tbl td{font-size:14px;padding:10px 10px 10px 0}
+  #spike-brand{min-height:85vh;justify-content:flex-end}
+  #spike-brand img{position:absolute!important;inset:0;top:0!important;width:100%!important;height:100%!important;transform:none!important;object-fit:cover}
+  #spike-brand>p{position:relative;text-shadow:0 1px 12px rgba(0,0,0,.45)}
+  #cover,#contact{min-height:90vh}
+}
+</style>
+</head>
+<body>
+<main>
+<div class="slide"><div class="frame"><section id="cover" class="dark" style="justify-content:center;gap:40px" data-transition="fade">
+<p class="kicker rise">Work &amp; projects</p>
+<h1 class="rise d1">Ludwig Olander</h1>
+<p class="lede rise d2">Entrepreneur and business student in Gothenburg. A selection of the companies and projects I have worked on.</p>
+<svg class="signal rise d3" viewBox="0 0 1664 40" preserveAspectRatio="none" aria-label="A flat signal line with a single peak">
+<path d="M0 28 L1180 28 L1196 26 L1208 4 L1220 36 L1232 20 L1244 28 L1664 28" fill="none" stroke="#9DB4F7" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+</svg>
+<p class="small rise d3">ludwig@spikebrewery.com · +46 (0)73 503 22 87</p>
+
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="overview">
+<div class="head">
+<p class="kicker">At a glance</p>
+<h2>Five engagements, 2020 to today</h2>
+</div>
+<table class="tbl">
+<tr><th>Year</th><th>Company</th><th>Role</th><th>In short</th></tr>
+<tr><td class="year">2020–</td><td>Spike Taproom</td><td>Bartender, Bar Manager, Restaurant Manager</td><td>Turned a loss into a profit</td></tr>
+<tr><td class="year">2023</td><td>Royal Roiers (UF company)</td><td>Founder</td><td>NFT collection sold out in under two hours</td></tr>
+<tr><td class="year">2024–</td><td>Helles Tält AB</td><td>Founder</td><td>Party tent rental built from scratch</td></tr>
+<tr><td class="year">2025</td><td>Lihall AB</td><td>Sales agent</td><td>Warehouse buildings for Protan Elmark</td></tr>
+<tr><td class="year">2026–</td><td>Censor M&amp;A</td><td>Intern</td><td>Buyer and seller mapping, company analysis</td></tr>
+</table>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="spike-numbers" class="alt">
+<div class="head">
+<p class="kicker">Spike Taproom · 2020–</p>
+<h2>Turning the numbers around</h2>
+<p class="small">Bartender on fixed-term contracts from 2020 · Bar Manager from June 2024 · Restaurant Manager since autumn 2024</p>
+</div>
+<img loading="lazy" class="logo" src="logo-spike.png" alt="Spike logo" style="position:absolute;top:128px;right:128px;width:118px;height:64px;object-fit:contain">
+<div class="stats three">
+<div class="stat rise"><p class="num">2.8 → 4.45</p><p class="lbl">Net sales, SEK M</p></div>
+<div class="stat rise d1"><p class="num">−0.3 → +0.44</p><p class="lbl">Result, SEK M</p></div>
+<div class="stat rise d2"><p class="num">~100k</p><p class="lbl">Fixed costs saved per year, SEK</p></div>
+</div>
+<p class="lede">I moved the taproom from opening only Friday–Saturday to more days a week, and made Thursdays profitable with booked beer tastings and company events.</p>
+<p class="small">Financial years July–June, latest 2025/26.</p>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="spike-systems" class="alt">
+<div class="head">
+<p class="kicker">Spike Taproom · Lower fixed costs</p>
+<h2>Four systems built in-house with AI</h2>
+</div>
+<table class="tbl">
+<tr><th>System</th><th class="num">Before, SEK k/yr</th><th class="num">After, SEK k/yr</th></tr>
+<tr><td>Brewery system</td><td class="num">45</td><td class="num">3</td></tr>
+<tr><td>Staff and payroll</td><td class="num">16</td><td class="num">1</td></tr>
+<tr><td>CRM for private bookings</td><td class="num">27</td><td class="num">1</td></tr>
+<tr><td>Booking system</td><td class="num">20</td><td class="num">2</td></tr>
+<tr class="total"><td>Total</td><td class="num">108</td><td class="num">7</td></tr>
+</table>
+<p class="small">Built with AI and my own network of developers instead of external software vendors.</p>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="spike-events">
+<div class="head">
+<p class="kicker">Spike Taproom · Events</p>
+<h2>Christmas dinners, company events and weddings</h2>
+</div>
+<div class="cards three">
+<div class="card rise">
+<p class="step">2,800+ Christmas dinners</p>
+<p class="body">Built up the Christmas dinner business over three seasons.</p>
+<p class="note">Public sector: the Swedish Police, the Swedish Tax Agency, the Migration Agency and upper secondary schools. Private: Jakobsdals Charkuteri, SYSTRA, Jungheinrich, Talurit and Broadway &amp; Sons.</p>
+</div>
+<div class="card rise d1">
+<p class="step">Company events</p>
+<p class="body">Conferences and networking evenings for companies and organisations.</p>
+<p class="note">Including Medieakademin, Knowit, Swegon, Outofhome and West Coast Battery Forum.</p>
+</div>
+<div class="card rise d2">
+<p class="step">6 weddings since autumn 2025</p>
+<p class="body">Started hosting weddings in autumn 2025, with 5 arranged so far this year.</p>
+<p class="note">Weddings and private hire of the taproom, a revenue stream alongside regular opening hours.</p>
+</div>
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="spike-gallery" style="gap:40px">
+<div class="head">
+<p class="kicker">Spike Taproom · Events</p>
+<h2>Weddings, company events and Christmas dinners</h2>
+</div>
+<div style="display:grid;grid-template-columns:360px 360px 436px 436px;grid-template-rows:308px 308px;gap:24px">
+<video src="sp-wedding.mp4" poster="sp-wedding-still.jpg" style="width:360px;height:640px;object-fit:cover;border-radius:16px;grid-row:1 / span 2" autoplay muted loop playsinline preload="metadata" aria-label="Walking through the taproom set for a wedding, with bunting and long tables"></video>
+<video src="sp-xmas.mp4" poster="sp-xmas-still.jpg" style="width:360px;height:640px;object-fit:cover;border-radius:16px;grid-row:1 / span 2" autoplay muted loop playsinline preload="metadata" aria-label="A full taproom at a Christmas dinner with red tablecloths"></video>
+<img loading="lazy" src="sp-table.jpg" alt="Wedding tables set with candles and flowers next to the brewery windows" style="width:436px;height:308px;object-fit:cover;border-radius:16px">
+<img loading="lazy" src="sp-dinner.jpg" alt="Wedding guests at dinner under the Spike banner" style="width:436px;height:308px;object-fit:cover;border-radius:16px">
+<img loading="lazy" src="sp-mingle.jpg" alt="A company networking evening in the taproom, with guests mingling under the Spike banner" style="width:436px;height:308px;object-fit:cover;border-radius:16px">
+<img loading="lazy" src="sp-party.jpg" alt="A wedding party under fairy lights and drapes, with a live band" style="width:436px;height:308px;object-fit:cover;object-position:center 72%;border-radius:16px" data-crop="1 50% 87.188%">
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="spike-brand" class="accent" style="gap:40px">
+<img loading="lazy" src="sp-sunlit.jpg" alt="Spike Taproom in afternoon sun: tall arched windows, brick walls and the bar" style="position:absolute;top:calc(50% - 1px);left:0;width:1909px;height:1285px;transform:translateY(-50%);box-sizing:border-box">
+<p class="kicker" style="max-width:860px">Spike Taproom · Vision and brand</p>
+<p class="statement rise" style="max-width:860px">“We are a homely place.”</p>
+<p class="rise d1" style="font-size:30px;max-width:860px">The vision I have worked with at Spike, and the line the brand is built around.</p>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="helles" class="alt">
+<div class="head">
+<p class="kicker">Helles Tält AB · Founder · 2024–</p>
+<h2>Brand and revenue built from zero</h2>
+</div>
+<img loading="lazy" class="logo" src="logo-helles-hq.png" alt="Helles Tält logo" style="position:absolute;right:128px;object-fit:contain;top:105px;width:217px;height:95px;box-sizing:border-box">
+<div class="stats four">
+<div class="stat rise"><p class="num">~1.65M</p><p class="lbl">Net sales 2026, SEK</p></div>
+<div class="stat rise d1"><p class="num">12</p><p class="lbl">Employees during the summer</p></div>
+<div class="stat rise d2"><p class="num">2</p><p class="lbl">Employees year-round</p></div>
+<div class="stat rise d3"><p class="num">2</p><p class="lbl">Depots, in Gothenburg and Mariestad</p></div>
+</div>
+<p class="lede">Rental of party tents, furniture, tableware and equipment, mainly for spring and summer events.</p>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="skintebo">
+<div class="head">
+<p class="kicker">Helles Tält · Largest projects so far</p>
+<h2>Skintebokalaset: a neighbourhood turns 50</h2>
+</div>
+<div class="cols">
+<div style="display:flex;flex-direction:column;gap:28px">
+<p class="lede">The 50th anniversary of the Skintebo residential area, 29 August 2026. 1,350 tickets sold.</p>
+<ul class="list">
+<li>Festival tent (220 m²) with flooring from our own depot</li>
+<li>Party tents and pagoda tents</li>
+<li>Stage through a partner on a framework agreement</li>
+<li>Activities: Wipeout, mechanical bull, obstacle course</li>
+<li>Staff for the activities, night guards and pick-and-pack</li>
+<li>Food trucks, ice cream and a kiosk</li>
+</ul>
+</div>
+<img loading="lazy" class="photo" src="skintebo-overview.jpg" alt="Skintebokalaset: mechanical bull, obstacle course, Wipeout and tents, with a Helles truck in the background">
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="skintebo-gallery" style="gap:40px">
+<div class="head">
+<p class="kicker">Helles Tält · Skintebokalaset</p>
+<h2>The day in pictures</h2>
+</div>
+<div style="display:grid;grid-template-columns:539px 539px 539px;grid-template-rows:308px 308px;gap:24px">
+<img loading="lazy" src="skintebo-obstacle.jpg" alt="Children in the inflatable obstacle course" style="width:539px;height:640px;object-fit:cover;border-radius:16px;grid-row:1 / span 2">
+<img loading="lazy" src="skintebo-concert-tent.jpg" alt="The festival tent set up with stage and seating" style="width:539px;height:308px;object-fit:cover;border-radius:16px">
+<img loading="lazy" src="skintebo-show.jpg" alt="A show on the stage in the full festival tent" style="width:539px;height:308px;object-fit:cover;border-radius:16px">
+<img loading="lazy" src="skintebo-foodtrucks.jpg" alt="Food trucks next to the party tent" style="width:539px;height:308px;object-fit:cover;border-radius:16px">
+<img loading="lazy" src="skintebo-sun.jpg" alt="Tents, the obstacle course and Wipeout in the evening sun" style="width:539px;height:308px;object-fit:cover;border-radius:16px">
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="winemech">
+<div class="head">
+<p class="kicker">Helles Tält · Largest projects so far</p>
+<h2>Wine Mechanics Block Party at Slakthuset</h2>
+</div>
+<div class="cols">
+<div style="display:flex;flex-direction:column;gap:28px">
+<p class="lede">Held on 18 July. Our delivery was tents only.</p>
+<div class="stats" style="grid-template-columns:1fr 1fr">
+<div class="stat"><p class="num">30+</p><p class="lbl">Tents delivered and assembled</p></div>
+<div class="stat"><p class="num">8,000</p><p class="lbl">Visitors</p></div>
+</div>
+<ul class="list">
+<li>Long party tents over the seating areas</li>
+<li>Pop-up tents for bars and food stalls</li>
+</ul>
+</div>
+<img loading="lazy" class="photo" src="wm-popups.jpg" alt="The Block Party at Slakthuset: rows of white tents leading to the stage, with Wine Mechanics banners">
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="winemech-gallery" style="gap:40px">
+<div class="head">
+<p class="kicker">Helles Tält · Wine Mechanics Block Party</p>
+<h2>Day to night at Slakthuset</h2>
+</div>
+<div style="display:grid;grid-template-columns:539px 539px 539px;grid-template-rows:308px 308px;gap:24px">
+<img loading="lazy" src="wm-crowd.jpg" alt="Crowds between the brick buildings and the tents" style="width:539px;height:640px;object-fit:cover;border-radius:16px;grid-row:1 / span 2">
+<img loading="lazy" src="wm-crew.jpg" alt="Crew walking between long party tents with guests seated at tables" style="width:539px;height:308px;object-fit:cover;border-radius:16px">
+<img loading="lazy" src="wm-tent.jpg" alt="Guests at high tables under a party tent" style="width:539px;height:308px;object-fit:cover;border-radius:16px">
+<img loading="lazy" src="wm-street.jpg" alt="A row of black pop-up tents housing food stalls" style="width:539px;height:308px;object-fit:cover;border-radius:16px">
+<img loading="lazy" src="wm-night.jpg" alt="The party tent at night in front of the lit brick facade" style="width:539px;height:308px;object-fit:cover;border-radius:16px">
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="lihall" class="alt">
+<div class="head">
+<p class="kicker">Lihall AB · Sales agent for Protan Elmark · 2025</p>
+<h2>A warehouse for Österåker Golf Club</h2>
+</div>
+<img loading="lazy" class="logo" src="logo-lihall.png" alt="Lihall AB logo" style="position:absolute;right:128px;object-fit:contain;top:68px;width:263px;height:120px;box-sizing:border-box">
+<div class="cols">
+<div style="display:flex;flex-direction:column;gap:36px">
+<div class="stats" style="grid-template-columns:1fr 1fr">
+<div class="stat"><p class="num">10×15×3 m</p><p class="lbl">Black PVC warehouse, delivered and assembled</p></div>
+<div class="stat"><p class="num">~550k</p><p class="lbl">Sales value, SEK excl. VAT</p></div>
+</div>
+<ul class="list">
+<li>Project design and building permit</li>
+<li>Wind and snow zone calculations</li>
+<li>Booking installers, a telehandler and a scissor lift</li>
+</ul>
+</div>
+<img loading="lazy" class="photo" src="lh-finished.jpg" alt="The finished black PVC warehouse beside the course at Österåker Golf Club">
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="lihall-build" class="alt">
+<div class="head">
+<p class="kicker">Lihall AB · Österåker Golf Club</p>
+<h2>From empty plot to finished warehouse</h2>
+</div>
+<div style="display:flex;gap:40px;align-items:flex-start">
+<div style="display:flex;flex-direction:column;gap:16px">
+<video src="lh-site.mp4" poster="lh-video-still.jpg" style="width:315px;height:560px;object-fit:cover;border-radius:16px" autoplay muted loop playsinline preload="metadata" aria-label="The empty site with the booked telehandler and scissor lift"></video>
+<p class="small">The site, with telehandler and scissor lift</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<img loading="lazy" src="lh-assembly.jpg" alt="Installers fitting the doors on the black PVC warehouse" style="width:747px;height:560px;object-fit:cover;border-radius:16px">
+<p class="small">Assembly: fitting the doors</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<img loading="lazy" src="lh-inside.jpg" alt="Inside the warehouse during assembly, looking out over the golf course" style="width:420px;height:560px;object-fit:cover;border-radius:16px">
+<p class="small">Inside, looking out over the course</p>
+</div>
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="censor">
+<div class="head">
+<p class="kicker">Censor M&amp;A · Intern · Nov 2026–Jan 2027</p>
+<h2>What I am working on</h2>
+</div>
+<img loading="lazy" class="logo" src="censor-logo.svg" alt="Censor logo" style="position:absolute;right:128px;object-fit:contain;top:114px;width:253px;height:63px;box-sizing:border-box">
+<div class="cards three">
+<div class="card rise">
+<p class="step">Buyers and sellers</p>
+<p class="body">Mapping potential buyers and sellers of companies, mainly in and around the process industry.</p>
+</div>
+<div class="card rise d1">
+<p class="step">Company analysis</p>
+<p class="body">In-depth analyses of companies, covering both management and operations.</p>
+</div>
+<div class="card rise d2">
+<p class="step">Deal benchmarks</p>
+<p class="body">Comparing past acquisitions and estimating their transaction size by analysing group accounts and the accounts of several companies involved.</p>
+</div>
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="uf" class="alt">
+<div class="head">
+<p class="kicker">Royal Roiers · UF company · 2023</p>
+<h2>An NFT collection that sold out in under two hours</h2>
+</div>
+<div class="cols">
+<div style="display:flex;flex-direction:column;gap:28px">
+<div class="stats" style="grid-template-columns:1fr 1fr;row-gap:32px">
+<div class="stat rise"><p class="num">1,550</p><p class="lbl">NFTs in the collection</p></div>
+<div class="stat rise d1"><p class="num">&lt; 2 h</p><p class="lbl">To sell out</p></div>
+<div class="stat rise d2"><p class="num">~550k</p><p class="lbl">Net sales, SEK excl. VAT</p></div>
+<div class="stat rise d3"><p class="num">~1.07M</p><p class="lbl">Secondary trading, SEK</p></div>
+</div>
+<p class="lede">Developed and launched during my UF year in high school. Holders got access to a private forum.</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<video src="rr-video.mp4" poster="f6.jpg" style="width:720px;height:432px;object-fit:cover;border-radius:16px" autoplay muted loop playsinline preload="metadata" aria-label="Royal Roiers pixel-art trailer: a crowned king on a battlefield"></video>
+<p class="small"><a href="https://opensea.io/collection/the-royal-roiers/activity" style="color:#1D4ED8">opensea.io/collection/the-royal-roiers</a></p>
+</div>
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="uf-launch" class="dark">
+<div class="head">
+<p class="kicker">Royal Roiers · The launch</p>
+<h2>Art, mint and community</h2>
+</div>
+<div style="display:flex;gap:40px;align-items:flex-start">
+<div style="display:flex;flex-direction:column;gap:16px">
+<img loading="lazy" src="rr-pfp.png" alt="A Royal Roiers NFT: a pixel-art king with crown and sceptre" style="width:480px;height:480px;object-fit:cover;border-radius:16px">
+<p class="small">One of the 1,550 Royal Roiers</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<img loading="lazy" src="rr-mint.jpg" alt="Mint details: supply 1,550, prices and limits per wallet" style="width:855px;height:480px;object-fit:cover;border-radius:16px">
+<p class="small">Mint details, with prices in ETH</p>
+</div>
+<div style="display:flex;flex-direction:column;gap:16px">
+<img loading="lazy" src="rr-space.jpg" alt="Live Twitter Space 'Kingslist Mint! (Royal Roiers)' with 201 listeners" style="width:222px;height:480px;object-fit:cover;object-position:top;border-radius:16px">
+<p class="small">201 live listeners</p>
+</div>
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="pnlbot" class="alt">
+<div class="head">
+<p class="kicker">Royal Roiers · Side product</p>
+<h2>A profit and loss bot for crypto traders</h2>
+</div>
+<div style="display:grid;grid-template-columns:1fr 600px;gap:72px;align-items:start">
+<div style="display:flex;flex-direction:column;gap:32px">
+<ol class="list">
+<li>You pasted the transaction ID of the trade you wanted to show into the bot.</li>
+<li>The bot generated an image with your profile and your trade.</li>
+<li>It showed your profit or loss, or the potential result in real time if you had not sold.</li>
+</ol>
+<p class="lede">Sold to Discord communities, whose members shared their trades on Twitter and so marketed the groups. We were early; the market soon filled with competitors offering the same service. Estimated sales: SEK ~110k.</p>
+</div>
+<img loading="lazy" src="rr-bot-card.jpg" alt="An image generated by the bot: a trade with 10.3 ETH realised profit, 295%, and the Royal Roiers king" style="width:600px;height:591px;object-fit:contain;border-radius:16px;background:#2A2A2A">
+</div>
+</section>
+</div></div>
+<div class="slide"><div class="frame"><section id="contact" class="dark" style="justify-content:center;gap:40px">
+<p class="kicker">Contact</p>
+<h2 class="rise">Thank you for taking a look</h2>
+<p class="lede rise d1">I would be glad to tell you more over a coffee, with the gingerbread.</p>
+<svg class="signal rise d2" viewBox="0 0 1664 40" preserveAspectRatio="none" aria-label="A flat signal line with a single peak">
+<path d="M0 28 L1180 28 L1196 26 L1208 4 L1220 36 L1232 20 L1244 28 L1664 28" fill="none" stroke="#9DB4F7" stroke-width="3" stroke-linejoin="round" stroke-linecap="round"></path>
+</svg>
+<p class="rise d2" style="font-size:40px;font-family:'Space Grotesk', Arial, sans-serif;font-weight:700">Ludwig Olander</p>
+<p class="small rise d3">ludwig@spikebrewery.com · +46 (0)73 503 22 87 · Gothenburg</p>
+</section>
+</div></div>
+</main>
+<footer>Ludwig Olander · <a href="mailto:ludwig@spikebrewery.com">ludwig@spikebrewery.com</a> · <a href="tel:+46735032287">+46 (0)73 503 22 87</a></footer>
+<script>
+function fit(){document.querySelectorAll('.slide').forEach(s=>s.style.setProperty('--s',s.clientWidth/1920))}
+addEventListener('resize',fit);fit();
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('seen');io.unobserve(e.target)}}),{threshold:0,rootMargin:"0px"});
+document.querySelectorAll('.slide').forEach(s=>io.observe(s));
+document.querySelectorAll('video').forEach(v=>{v.muted=true;v.play().catch(()=>{})});
+</script>
+</body>
+</html>
